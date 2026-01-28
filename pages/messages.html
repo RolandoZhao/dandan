@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>留言板 - 丹丹的粉雪之旅</title>
+    <meta name="description" content="金宝和丹丹的留言板">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@400;500&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/base.css">
+    <link rel="stylesheet" href="/src/styles/board.css">
+</head>
+
+<body>
+    <a href="/" class="back-link">← 返回</a>
+
+    <main class="board-page">
+        <header class="board-header">
+            <h1>留言板</h1>
+            <p>金宝和丹丹的秘密基地</p>
+        </header>
+
+        <!-- 用户选择 -->
+        <div class="user-select">
+            <button class="user-btn active" data-user="金宝">
+                <span class="user-emoji">👦</span>
+                <span>金宝</span>
+            </button>
+            <button class="user-btn" data-user="丹丹">
+                <span class="user-emoji">👧</span>
+                <span>丹丹</span>
+            </button>
+        </div>
+
+        <!-- 留言列表 -->
+        <section class="messages-section">
+            <div class="messages-list" id="messages-list">
+                <div class="empty-state">
+                    <p>还没有留言</p>
+                    <p>说点什么吧～</p>
+                </div>
+            </div>
+
+            <div class="message-input">
+                <textarea id="message-input" placeholder="说点什么..."></textarea>
+                <button id="send-message">发送</button>
+            </div>
+        </section>
+
+        <!-- 返回清单链接 -->
+        <a href="/pages/board.html" class="back-to-checklist">
+            ✅ 返回准备清单
+        </a>
+    </main>
+
+    <script type="module">
+        let currentUser = '金宝';
+
+        document.querySelectorAll('.user-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.user-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentUser = btn.dataset.user;
+            });
+        });
+
+        function loadMessages() {
+            const messages = JSON.parse(localStorage.getItem('messages') || '[]');
+            const list = document.getElementById('messages-list');
+
+            if (messages.length === 0) {
+                list.innerHTML = '<div class="empty-state"><p>还没有留言</p><p>说点什么吧～</p></div>';
+                return;
+            }
+
+            list.innerHTML = messages.map(msg => {
+                const date = new Date(msg.timestamp);
+                const timeStr = `${date.getMonth() + 1}/${date.getDate()} ${date.getHours()}:${String(date.getMinutes()).padStart(2, '0')}`;
+                return `
+          <div class="message-item ${msg.author === '金宝' ? 'from-jinbao' : 'from-dandan'}">
+            <div class="message-header">
+              <span class="message-author">${msg.author === '金宝' ? '👦' : '👧'} ${msg.author}</span>
+              <span class="message-time">${timeStr}</span>
+            </div>
+            <div class="message-content">${msg.content}</div>
+          </div>
+        `;
+            }).join('');
+        }
+
+        loadMessages();
+
+        document.getElementById('send-message').addEventListener('click', () => {
+            const input = document.getElementById('message-input');
+            const content = input.value.trim();
+            if (!content) return;
+
+            const messages = JSON.parse(localStorage.getItem('messages') || '[]');
+            messages.unshift({
+                author: currentUser,
+                content: content,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('messages', JSON.stringify(messages));
+
+            input.value = '';
+            loadMessages();
+        });
+    </script>
+</body>
+
+</html>

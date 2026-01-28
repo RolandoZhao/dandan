@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤖臭臭 - 丹丹的粉雪之旅</title>
+    <meta name="description" content="AI旅行助手 - 问答、翻译、图片识别">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@400;500&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/base.css">
+    <link rel="stylesheet" href="/src/styles/ai.css">
+</head>
+
+<body>
+    <a href="/" class="back-link">← 返回</a>
+
+    <main class="ai-page">
+        <header class="ai-header">
+            <div class="ai-avatar">🤖</div>
+            <h1 class="ai-title">臭臭</h1>
+            <p class="ai-subtitle">青森旅行小助手</p>
+            <div class="ai-status">在线</div>
+        </header>
+
+        <!-- 对话区域 -->
+        <div class="chat-container" id="chat-container">
+            <div class="chat-welcome">
+                <div class="chat-welcome-icon">💬</div>
+                <p>你好！我是臭臭，你的青森旅行小助手。</p>
+                <p>可以问我关于行程、翻译、美食的任何问题。</p>
+                <p>也可以发照片让我帮你识别哦～</p>
+
+                <div class="chat-suggestions">
+                    <button class="suggestion-chip" data-text="八甲田的雪况怎么样？">八甲田雪况</button>
+                    <button class="suggestion-chip" data-text="推荐青森站附近的晚餐">推荐晚餐</button>
+                    <button class="suggestion-chip" data-text="怎么用日语说「请帮我拍照」？">日语翻译</button>
+                    <button class="suggestion-chip" data-text="JR Pass怎么用？">JR Pass</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="input-area">
+            <div class="input-actions">
+                <button class="action-btn" id="btn-camera" title="拍照识别">
+                    📷
+                </button>
+                <button class="action-btn" id="btn-upload" title="上传图片">
+                    🖼️
+                </button>
+                <button class="action-btn" id="btn-generate" title="生成图片">
+                    🎨
+                </button>
+            </div>
+            <div class="input-wrapper">
+                <textarea id="user-input" placeholder="问点什么..." rows="1"></textarea>
+                <button class="send-btn" id="btn-send">
+                    →
+                </button>
+            </div>
+        </div>
+
+        <!-- 隐藏的文件输入 -->
+        <input type="file" id="file-input" accept="image/*" hidden>
+    </main>
+
+    <!-- API配置 - 需要填入你的API Key -->
+    <script>
+        // 在这里填入你的Gemini API Key
+        window.GEMINI_API_KEY = '';
+    </script>
+    <script type="module" src="/src/scripts/ai.js"></script>
+
+    <!-- 建议点击处理 -->
+    <script>
+        document.querySelectorAll('.suggestion-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const text = chip.dataset.text;
+                document.getElementById('user-input').value = text;
+                document.getElementById('btn-send').click();
+            });
+        });
+    </script>
+</body>
+
+</html>

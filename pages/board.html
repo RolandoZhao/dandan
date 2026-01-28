@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>准备清单 - 丹丹的粉雪之旅</title>
+    <meta name="description" content="金宝和丹丹的旅行准备清单">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@400;500&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/base.css">
+    <link rel="stylesheet" href="/src/styles/board.css">
+</head>
+
+<body>
+    <a href="/" class="back-link">← 返回</a>
+
+    <main class="board-page">
+        <header class="board-header">
+            <h1>准备清单</h1>
+            <p>金宝和丹丹的行李检查</p>
+        </header>
+
+        <!-- 用户选择 -->
+        <div class="user-select">
+            <button class="user-btn active" data-user="金宝">
+                <span class="user-emoji">👦</span>
+                <span>金宝</span>
+            </button>
+            <button class="user-btn" data-user="丹丹">
+                <span class="user-emoji">👧</span>
+                <span>丹丹</span>
+            </button>
+        </div>
+
+        <!-- 清单内容（默认显示） -->
+        <section class="checklist-content">
+
+            <!-- 出发必备清单 -->
+            <div class="checklist-section">
+                <h3 class="checklist-title">📋 出发必备</h3>
+                <div class="checklist-header">
+                    <span></span>
+                    <span class="header-jinbao">👦</span>
+                    <span class="header-dandan">👧</span>
+                </div>
+                <div class="dual-checklist" id="checklist-essential">
+                    <div class="dual-item" data-key="passport">
+                        <span class="item-text">护照（有效期6个月以上）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="visa">
+                        <span class="item-text">签证（确认有效）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="ticket">
+                        <span class="item-text">机票（打印确认单）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="jrpass">
+                        <span class="item-text">JR Pass兑换券</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="hotel">
+                        <span class="item-text">酒店预订确认单</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="insurance">
+                        <span class="item-text">旅行保险（含滑雪）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 电子设备 -->
+            <div class="checklist-section">
+                <h3 class="checklist-title">📱 电子设备</h3>
+                <div class="checklist-header">
+                    <span></span>
+                    <span class="header-jinbao">👦</span>
+                    <span class="header-dandan">👧</span>
+                </div>
+                <div class="dual-checklist">
+                    <div class="dual-item" data-key="phone">
+                        <span class="item-text">手机 + 充电器</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="simcard">
+                        <span class="item-text">日本手机卡/WiFi</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="powerbank">
+                        <span class="item-text">充电宝（≤100Wh）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="camera">
+                        <span class="item-text">相机/GoPro</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 现金与支付 -->
+            <div class="checklist-section">
+                <h3 class="checklist-title">💴 现金与支付</h3>
+                <div class="checklist-header">
+                    <span></span>
+                    <span class="header-jinbao">👦</span>
+                    <span class="header-dandan">👧</span>
+                </div>
+                <div class="dual-checklist">
+                    <div class="dual-item" data-key="cash">
+                        <span class="item-text">日元现金（5-10万円）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="card">
+                        <span class="item-text">信用卡（Visa/Master）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="bankcard">
+                        <span class="item-text">银联卡（ATM取现）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 滑雪装备 -->
+            <div class="checklist-section">
+                <h3 class="checklist-title">⛷️ 滑雪装备</h3>
+                <div class="checklist-header">
+                    <span></span>
+                    <span class="header-jinbao">👦</span>
+                    <span class="header-dandan">👧</span>
+                </div>
+                <div class="dual-checklist">
+                    <div class="dual-item" data-key="goggles">
+                        <span class="item-text">雪镜</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="gloves">
+                        <span class="item-text">滑雪手套</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="helmet">
+                        <span class="item-text">头盔（可租）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="skiclothes">
+                        <span class="item-text">滑雪服（上下）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="baselayer">
+                        <span class="item-text">排汗内衣</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="skisocks">
+                        <span class="item-text">滑雪袜</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="neckwarmer">
+                        <span class="item-text">面罩/脖套</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 日用品 -->
+            <div class="checklist-section">
+                <h3 class="checklist-title">🧴 日用品</h3>
+                <div class="checklist-header">
+                    <span></span>
+                    <span class="header-jinbao">👦</span>
+                    <span class="header-dandan">👧</span>
+                </div>
+                <div class="dual-checklist">
+                    <div class="dual-item" data-key="sunscreen">
+                        <span class="item-text">防晒霜</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="lipbalm">
+                        <span class="item-text">唇膏</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="medicine">
+                        <span class="item-text">常用药</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="toiletries">
+                        <span class="item-text">洗漱用品</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                    <div class="dual-item" data-key="warmclothes">
+                        <span class="item-text">保暖衣物（羽绒服）</span>
+                        <input type="checkbox" class="cb-jinbao" title="金宝">
+                        <input type="checkbox" class="cb-dandan" title="丹丹">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分隔线 -->
+            <hr class="checklist-divider">
+
+            <!-- 个人待办 -->
+            <h3 class="section-subtitle">📝 个人待办</h3>
+            <div class="todos-container">
+                <div class="todo-column">
+                    <h3>👦 金宝</h3>
+                    <ul class="todo-list" id="todos-jinbao"></ul>
+                    <div class="add-todo" data-owner="金宝">
+                        <input type="text" placeholder="添加任务...">
+                        <button>+</button>
+                    </div>
+                </div>
+
+                <div class="todo-column">
+                    <h3>👧 丹丹</h3>
+                    <ul class="todo-list" id="todos-dandan"></ul>
+                    <div class="add-todo" data-owner="丹丹">
+                        <input type="text" placeholder="添加任务...">
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 查看留言板链接 -->
+            <a href="/pages/messages.html" class="view-messages-link">
+                💬 查看留言板 →
+            </a>
+        </section>
+    </main>
+
+    <!-- 浮动留言按钮 -->
+    <button class="fab-message" id="fab-message" title="给TA留言">
+        💬
+    </button>
+
+    <!-- 快速留言弹窗 -->
+    <div class="quick-message-modal" id="quick-message-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="quick-message-box">
+            <div class="modal-header">
+                <h3>快速留言</h3>
+                <button class="modal-close" id="modal-close">×</button>
+            </div>
+            <div class="modal-user-select">
+                <button class="modal-user active" data-user="金宝">👦 金宝</button>
+                <button class="modal-user" data-user="丹丹">👧 丹丹</button>
+            </div>
+            <textarea id="quick-message-input" placeholder="说点什么..."></textarea>
+            <button class="modal-send" id="modal-send">发送</button>
+        </div>
+    </div>
+
+    <script type="module">
+        // ======= 双列清单状态管理 =======
+        function initDualChecklists() {
+            document.querySelectorAll('.dual-item').forEach(item => {
+                const key = item.dataset.key;
+                const cbJinbao = item.querySelector('.cb-jinbao');
+                const cbDandan = item.querySelector('.cb-dandan');
+
+                cbJinbao.checked = localStorage.getItem(`checklist-${key}-jinbao`) === 'true';
+                cbDandan.checked = localStorage.getItem(`checklist-${key}-dandan`) === 'true';
+
+                cbJinbao.addEventListener('change', () => {
+                    localStorage.setItem(`checklist-${key}-jinbao`, cbJinbao.checked);
+                });
+                cbDandan.addEventListener('change', () => {
+                    localStorage.setItem(`checklist-${key}-dandan`, cbDandan.checked);
+                });
+            });
+        }
+        initDualChecklists();
+
+        // ======= 待办功能（本地存储） =======
+        let currentUser = '金宝';
+
+        document.querySelectorAll('.user-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.user-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentUser = btn.dataset.user;
+            });
+        });
+
+        function loadTodos() {
+            const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+            const jinbaoList = document.getElementById('todos-jinbao');
+            const dandanList = document.getElementById('todos-dandan');
+            jinbaoList.innerHTML = '';
+            dandanList.innerHTML = '';
+
+            todos.forEach(todo => {
+                const li = document.createElement('li');
+                li.className = `todo-item ${todo.completed ? 'completed' : ''}`;
+                li.innerHTML = `
+          <input type="checkbox" ${todo.completed ? 'checked' : ''} data-id="${todo.id}">
+          <span>${todo.text}</span>
+          <button class="delete-todo" data-id="${todo.id}">×</button>
+        `;
+                if (todo.owner === '金宝') jinbaoList.appendChild(li);
+                else dandanList.appendChild(li);
+            });
+
+            document.querySelectorAll('.todo-item input[type="checkbox"]').forEach(cb => {
+                cb.addEventListener('change', (e) => {
+                    const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+                    const t = todos.find(x => x.id == e.target.dataset.id);
+                    if (t) { t.completed = e.target.checked; localStorage.setItem('todos', JSON.stringify(todos)); }
+                    loadTodos();
+                });
+            });
+
+            document.querySelectorAll('.delete-todo').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    let todos = JSON.parse(localStorage.getItem('todos') || '[]');
+                    todos = todos.filter(x => x.id != e.target.dataset.id);
+                    localStorage.setItem('todos', JSON.stringify(todos));
+                    loadTodos();
+                });
+            });
+        }
+        loadTodos();
+
+        document.querySelectorAll('.add-todo').forEach(container => {
+            const input = container.querySelector('input');
+            const btn = container.querySelector('button');
+
+            const addTodo = () => {
+                const text = input.value.trim();
+                if (!text) return;
+                const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+                todos.push({ text, owner: container.dataset.owner, completed: false, id: Date.now() });
+                localStorage.setItem('todos', JSON.stringify(todos));
+                input.value = '';
+                loadTodos();
+            };
+
+            btn.addEventListener('click', addTodo);
+            input.addEventListener('keypress', (e) => { if (e.key === 'Enter') addTodo(); });
+        });
+
+        // ======= 浮动留言按钮 =======
+        const fab = document.getElementById('fab-message');
+        const modal = document.getElementById('quick-message-modal');
+        const overlay = document.getElementById('modal-overlay');
+        const closeBtn = document.getElementById('modal-close');
+        const sendBtn = document.getElementById('modal-send');
+        const messageInput = document.getElementById('quick-message-input');
+        let modalUser = '金宝';
+
+        fab.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        document.querySelectorAll('.modal-user').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.modal-user').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                modalUser = btn.dataset.user;
+            });
+        });
+
+        sendBtn.addEventListener('click', () => {
+            const content = messageInput.value.trim();
+            if (!content) return;
+
+            const messages = JSON.parse(localStorage.getItem('messages') || '[]');
+            messages.unshift({
+                author: modalUser,
+                content: content,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('messages', JSON.stringify(messages));
+
+            messageInput.value = '';
+            modal.classList.remove('active');
+
+            // 显示成功提示
+            showToast('留言已发送 💬');
+        });
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 10);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

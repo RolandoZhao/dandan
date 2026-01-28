@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>看看 - 丹丹的粉雪之旅</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@400;500&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/base.css">
+    <link rel="stylesheet" href="/src/styles/videos.css">
+</head>
+
+<body>
+    <a href="/" class="back-link">← 返回</a>
+
+    <main class="page">
+        <header class="page-header">
+            <h1 class="page-title">看看</h1>
+            <p class="page-subtitle">达人们的青森vlog</p>
+        </header>
+
+        <!-- 分类标签 -->
+        <div class="video-tabs">
+            <button class="video-tab active" data-category="all">全部</button>
+            <button class="video-tab" data-category="ski">⛷️ 滑雪</button>
+            <button class="video-tab" data-category="culture">🏮 文化</button>
+            <button class="video-tab" data-category="onsen">♨️ 温泉</button>
+            <button class="video-tab" data-category="food">🍽️ 美食</button>
+        </div>
+
+        <!-- 视频列表 -->
+        <div class="video-grid" id="video-grid">
+            <!-- 滑雪视频 -->
+            <div class="video-card" data-category="ski">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=八甲田+粉雪+滑雪">
+                    <div class="video-placeholder">⛷️</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>八甲田粉雪体验</h3>
+                    <p>树冰间穿梭的极致体验</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="ski">
+                <div class="video-thumb"
+                    data-video="https://www.youtube.com/results?search_query=Aomori+Spring+powder+skiing">
+                    <div class="video-placeholder">🎿</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>Aomori Spring</h3>
+                    <p>日本最好的粉雪之一</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="ski">
+                <div class="video-thumb"
+                    data-video="https://www.youtube.com/results?search_query=Hakkoda+backcountry+skiing">
+                    <div class="video-placeholder">🏔️</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>八甲田野雪探险</h3>
+                    <p>Backcountry天堂</p>
+                </div>
+            </div>
+
+            <!-- 文化视频 -->
+            <div class="video-card" data-category="culture">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=弘前城+雪灯笼祭">
+                    <div class="video-placeholder">🏮</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>弘前城雪灯笼祭</h3>
+                    <p>浪漫的冬日祭典</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="culture">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=青森+睡魔祭+nebuta">
+                    <div class="video-placeholder">👹</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>青森睡魔祭</h3>
+                    <p>日本最大的祭典之一</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="culture">
+                <div class="video-thumb"
+                    data-video="https://www.youtube.com/results?search_query=Aomori+snowiest+city+world">
+                    <div class="video-placeholder">❄️</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>世界最多雪城市</h3>
+                    <p>青森的冬日风景</p>
+                </div>
+            </div>
+
+            <!-- 温泉视频 -->
+            <div class="video-card" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=乳头温泉+�的の湯+vlog">
+                    <div class="video-placeholder">♨️</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>乳头温泉鹤之汤</h3>
+                    <p>日本秘汤的代表</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=妙乃湯+乳頭温泉">
+                    <div class="video-placeholder">🌸</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>妙乃汤</h3>
+                    <p>女性人气No.1的秘汤</p>
+                </div>
+            </div>
+
+            <!-- 美食视频 -->
+            <div class="video-card" data-category="food">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=青森+のっけ丼+市场">
+                    <div class="video-placeholder">🍣</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>のっけ丼体验</h3>
+                    <p>自选海鲜盖饭</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="food">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=仙台+牛舌+利久">
+                    <div class="video-placeholder">🍖</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>仙台牛舌</h3>
+                    <p>厚切炭烤的美味</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="food">
+                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=弘前+苹果派">
+                    <div class="video-placeholder">🍎</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>弘前苹果派</h3>
+                    <p>日本苹果之都的甜品</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="/">首页</a>
+        <a href="/pages/ski.html">雪场</a>
+        <a href="/pages/food.html">吃什么</a>
+        <a href="/pages/ai.html">🤖臭臭</a>
+    </nav>
+
+    <script>
+        // Tab filtering
+        document.querySelectorAll('.video-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.video-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const category = tab.dataset.category;
+                document.querySelectorAll('.video-card').forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Video click - open YouTube search
+        document.querySelectorAll('.video-thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                window.open(thumb.dataset.video, '_blank');
+            });
+        });
+    </script>
+</body>
+
+</html>

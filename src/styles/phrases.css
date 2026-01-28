@@ -1,0 +1,106 @@
+/* ===========================
+   Phrases Page Styles
+   =========================== */
+
+.phrases-section {
+    margin-bottom: var(--space-xl);
+}
+
+.phrases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-md);
+}
+
+.phrases-grid.numbers {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 400px) {
+    .phrases-grid.numbers {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.phrase-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.phrase-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.phrase-card:active {
+    transform: scale(0.98);
+}
+
+.phrase-card.small {
+    padding: var(--space-sm);
+}
+
+@media (prefers-color-scheme: dark) {
+    .phrase-card {
+        background: #1A1A1A;
+    }
+}
+
+.phrase-cn {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.phrase-jp {
+    font-family: 'Noto Sans JP', var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: var(--space-xs);
+}
+
+.phrase-romaji {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+}
+
+.phrase-card.small .phrase-cn {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 2px;
+}
+
+.phrase-card.small .phrase-jp {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
