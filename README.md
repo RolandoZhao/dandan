@@ -69,5 +69,9 @@ alter publication supabase_realtime add table messages;
 - ⏳ Supabase 数据同步（待接入）
 - ⏳ 密码保护页面（待添加）
 - ⏳ PWA 桌面图标（待配置）
+- ⏳ **AI 后端集成**（最重要的安全项！）
+  - 文字：Gemini 3 Pro (`gemini-3.0-pro`)
+  - 图片：Nano Banana 2 (`nano-banana-2`)
+  - 必须通过 Supabase Edge Function 调用，严禁前端暴露 Key
 
 详细实现说明见 `Lovable指令_丹丹粉雪之旅.md`
