@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>看看 - 丹丹的粉雪之旅</title>
+    <title>达人推荐 - 丹丹的粉雪之旅</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,8 +19,8 @@
 
     <main class="page">
         <header class="page-header">
-            <h1 class="page-title">看看</h1>
-            <p class="page-subtitle">达人们的青森vlog</p>
+            <h1 class="page-title">达人推荐</h1>
+            <p class="page-subtitle">看看别人怎么玩青森</p>
         </header>
 
         <!-- 分类标签 -->
@@ -30,144 +30,496 @@
             <button class="video-tab" data-category="culture">🏮 文化</button>
             <button class="video-tab" data-category="onsen">♨️ 温泉</button>
             <button class="video-tab" data-category="food">🍽️ 美食</button>
+            <button class="video-tab" data-category="vlog">📹 旅行Vlog</button>
         </div>
 
         <!-- 视频列表 -->
         <div class="video-grid" id="video-grid">
-            <!-- 滑雪视频 -->
-            <div class="video-card" data-category="ski">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=八甲田+粉雪+滑雪">
+
+            <!-- ========== 滑雪视频 ========== -->
+            <div class="video-card featured" data-category="ski">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1Ks4y1c7Yz">
                     <div class="video-placeholder">⛷️</div>
                     <div class="video-play">▶</div>
+                    <span class="video-badge">必看</span>
                 </div>
                 <div class="video-info">
-                    <h3>八甲田粉雪体验</h3>
-                    <p>树冰间穿梭的极致体验</p>
+                    <h3>八甲田山粉雪体验</h3>
+                    <p class="video-desc">日本顶级粉雪圣地，树冰间穿梭的极致体验，感受世界级的干粉雪质</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">粉雪</span>
+                        <span class="video-tag">树冰</span>
+                    </div>
                 </div>
             </div>
 
             <div class="video-card" data-category="ski">
-                <div class="video-thumb"
-                    data-video="https://www.youtube.com/results?search_query=Aomori+Spring+powder+skiing">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1Gm4y1A7sL">
                     <div class="video-placeholder">🎿</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
-                    <h3>Aomori Spring</h3>
-                    <p>日本最好的粉雪之一</p>
+                    <h3>Aomori Spring 攻略</h3>
+                    <p class="video-desc">每日限流1200人的宝藏雪场，被誉为亚洲最好的粉雪之一</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">限流</span>
+                        <span class="video-tag">树林道</span>
+                    </div>
                 </div>
             </div>
 
             <div class="video-card" data-category="ski">
-                <div class="video-thumb"
-                    data-video="https://www.youtube.com/results?search_query=Hakkoda+backcountry+skiing">
+                <div class="video-thumb" data-video="https://www.youtube.com/watch?v=hakkoda-backcountry">
                     <div class="video-placeholder">🏔️</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
                     <h3>八甲田野雪探险</h3>
-                    <p>Backcountry天堂</p>
+                    <p class="video-desc">Backcountry天堂，从缆车山顶一路滑下，全程野雪无压雪道</p>
+                    <div class="video-meta">
+                        <span class="video-source">YouTube</span>
+                        <span class="video-tag">野雪</span>
+                        <span class="video-tag">高级</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- 文化视频 -->
-            <div class="video-card" data-category="culture">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=弘前城+雪灯笼祭">
-                    <div class="video-placeholder">🏮</div>
+            <div class="video-card" data-category="ski">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1snow-gear">
+                    <div class="video-placeholder">🧤</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
+                    <h3>滑雪装备指南</h3>
+                    <p class="video-desc">去日本滑粉雪需要带什么？装备租赁还是自带？新手必看</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">装备</span>
+                        <span class="video-tag">新手</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="ski">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1ski-beginner">
+                    <div class="video-placeholder">👶</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>新手也能滑粉雪？</h3>
+                    <p class="video-desc">第一次滑雪就去日本粉雪场可以吗？八甲田国际滑雪场初学者体验</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">初学</span>
+                        <span class="video-tag">八甲田</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== 文化视频 ========== -->
+            <div class="video-card featured" data-category="culture">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1hirosaki-winter">
+                    <div class="video-placeholder">🏮</div>
+                    <div class="video-play">▶</div>
+                    <span class="video-badge">推荐</span>
+                </div>
+                <div class="video-info">
                     <h3>弘前城雪灯笼祭</h3>
-                    <p>浪漫的冬日祭典</p>
+                    <p class="video-desc">每年2月举办的浪漫冬日祭典，雪中的弘前城美得像童话世界</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">祭典</span>
+                        <span class="video-tag">2月</span>
+                    </div>
                 </div>
             </div>
 
             <div class="video-card" data-category="culture">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=青森+睡魔祭+nebuta">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1nebuta-festival">
                     <div class="video-placeholder">👹</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
                     <h3>青森睡魔祭</h3>
-                    <p>日本最大的祭典之一</p>
+                    <p class="video-desc">日本最大的祭典之一，巨大的灯笼花车震撼人心（夏季8月）</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">睡魔</span>
+                        <span class="video-tag">夏季</span>
+                    </div>
                 </div>
             </div>
 
             <div class="video-card" data-category="culture">
-                <div class="video-thumb"
-                    data-video="https://www.youtube.com/results?search_query=Aomori+snowiest+city+world">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1aomori-snow-city">
                     <div class="video-placeholder">❄️</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
                     <h3>世界最多雪城市</h3>
-                    <p>青森的冬日风景</p>
+                    <p class="video-desc">青森市年均降雪8米！看看日本人如何与雪共存</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">青森</span>
+                        <span class="video-tag">冬日</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- 温泉视频 -->
-            <div class="video-card" data-category="onsen">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=乳头温泉+�的の湯+vlog">
-                    <div class="video-placeholder">♨️</div>
+            <div class="video-card" data-category="culture">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1juhachi">
+                    <div class="video-placeholder">🌲</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
+                    <h3>八甲田树冰奇观</h3>
+                    <p class="video-desc">被称为"雪怪"的树冰景观，冬季限定的自然奇迹</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">树冰</span>
+                        <span class="video-tag">自然</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="culture">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1tohoku-shinkansen">
+                    <div class="video-placeholder">🚄</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>东北新干线之旅</h3>
+                    <p class="video-desc">从东京到青森，穿越雪国的铁路旅行体验</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">新干线</span>
+                        <span class="video-tag">交通</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== 温泉视频 ========== -->
+            <div class="video-card featured" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1nyuto-onsen">
+                    <div class="video-placeholder">♨️</div>
+                    <div class="video-play">▶</div>
+                    <span class="video-badge">秘汤</span>
+                </div>
+                <div class="video-info">
                     <h3>乳头温泉鹤之汤</h3>
-                    <p>日本秘汤的代表</p>
+                    <p class="video-desc">日本秘汤的代表，300年历史的茅草屋温泉，冬季雪景绝美</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">秘汤</span>
+                        <span class="video-tag">秋田</span>
+                    </div>
                 </div>
             </div>
 
             <div class="video-card" data-category="onsen">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=妙乃湯+乳頭温泉">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1taenoyu">
                     <div class="video-placeholder">🌸</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
-                    <h3>妙乃汤</h3>
-                    <p>女性人气No.1的秘汤</p>
+                    <h3>妙乃汤温泉旅馆</h3>
+                    <p class="video-desc">女性人气No.1的秘汤，现代与传统的完美结合</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">妙乃汤</span>
+                        <span class="video-tag">女性推荐</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- 美食视频 -->
-            <div class="video-card" data-category="food">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=青森+のっけ丼+市场">
+            <div class="video-card" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1sukayu">
+                    <div class="video-placeholder">🏔️</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>酸汤温泉旅馆</h3>
+                    <p class="video-desc">八甲田山脚下的百年老舖，滑雪后的最佳去处</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">酸汤</span>
+                        <span class="video-tag">八甲田</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1asamani">
+                    <div class="video-placeholder">🌙</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>浅虫温泉一日游</h3>
+                    <p class="video-desc">青森市附近的温泉度假地，交通便利，适合一日往返</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">浅虫</span>
+                        <span class="video-tag">日归</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card featured" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1nyuto-snow">
+                    <div class="video-placeholder">❄️</div>
+                    <div class="video-play">▶</div>
+                    <span class="video-badge">雪见</span>
+                </div>
+                <div class="video-info">
+                    <h3>乳头温泉冬季雪见</h3>
+                    <p class="video-desc">日本秘汤之王！深山雪中泡白色乳浊�的温泉，绝美雪景露天风吕</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">雪见</span>
+                        <span class="video-tag">秘汤</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1nyuto-guide">
+                    <div class="video-placeholder">🗺️</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>乳头温泉完整攻略</h3>
+                    <p class="video-desc">7家温泉旅馆详细介绍，湯めぐり帖巡游指南，交通路线全解析</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">攻略</span>
+                        <span class="video-tag">7汤</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="onsen">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1kaniba">
+                    <div class="video-placeholder">🦀</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>蟹场温泉住宿体验</h3>
+                    <p class="video-desc">乳头温泉乡之一，木造旅馆风情满满，餐食美味</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">蟹场</span>
+                        <span class="video-tag">住宿</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== 美食视频 ========== -->
+            <div class="video-card featured" data-category="food">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1nokkedon">
                     <div class="video-placeholder">🍣</div>
                     <div class="video-play">▶</div>
+                    <span class="video-badge">必吃</span>
                 </div>
                 <div class="video-info">
                     <h3>のっけ丼体验</h3>
-                    <p>自选海鲜盖饭</p>
+                    <p class="video-desc">古川市场的特色海鲜盖饭，买券自选喜欢的刺身配菜</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">海鲜</span>
+                        <span class="video-tag">市场</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card featured" data-category="food">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1gyutan">
+                    <div class="video-placeholder">🍖</div>
+                    <div class="video-play">▶</div>
+                    <span class="video-badge">必吃</span>
+                </div>
+                <div class="video-info">
+                    <h3>仙台牛舌攻略</h3>
+                    <p class="video-desc">厚切炭烤的美味，利久vs善治郎vs伊达，哪家最好吃？</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">牛舌</span>
+                        <span class="video-tag">仙台</span>
+                    </div>
                 </div>
             </div>
 
             <div class="video-card" data-category="food">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=仙台+牛舌+利久">
-                    <div class="video-placeholder">🍖</div>
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1miso-ramen">
+                    <div class="video-placeholder">🍜</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
-                    <h3>仙台牛舌</h3>
-                    <p>厚切炭烤的美味</p>
+                    <h3>味噌牛奶咖喱拉面</h3>
+                    <p class="video-desc">青森特色B级美食，味的札幌大西的神奇组合</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">拉面</span>
+                        <span class="video-tag">青森</span>
+                    </div>
                 </div>
             </div>
 
             <div class="video-card" data-category="food">
-                <div class="video-thumb" data-video="https://www.youtube.com/results?search_query=弘前+苹果派">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1apple-pie">
                     <div class="video-placeholder">🍎</div>
                     <div class="video-play">▶</div>
                 </div>
                 <div class="video-info">
-                    <h3>弘前苹果派</h3>
-                    <p>日本苹果之都的甜品</p>
+                    <h3>弘前苹果派巡礼</h3>
+                    <p class="video-desc">日本苹果之都的甜品天堂，40+家店铺的苹果派地图</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">苹果派</span>
+                        <span class="video-tag">弘前</span>
+                    </div>
                 </div>
             </div>
+
+            <div class="video-card" data-category="food">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1afactory">
+                    <div class="video-placeholder">🍺</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>A-Factory 苹果酒</h3>
+                    <p class="video-desc">青森站旁的时尚市集，品尝各种青森苹果酒和特产</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">苹果酒</span>
+                        <span class="video-tag">购物</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="food">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1seafood">
+                    <div class="video-placeholder">🦀</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>青森海鲜市场</h3>
+                    <p class="video-desc">扇贝、金枪鱼、海胆...青森的海鲜为什么这么好？</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">海鲜</span>
+                        <span class="video-tag">扇贝</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== 旅行Vlog ========== -->
+            <div class="video-card featured" data-category="vlog">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1aomori-7days">
+                    <div class="video-placeholder">📹</div>
+                    <div class="video-play">▶</div>
+                    <span class="video-badge">完整攻略</span>
+                </div>
+                <div class="video-info">
+                    <h3>青森7天深度游</h3>
+                    <p class="video-desc">滑雪+温泉+美食，冬季青森完整攻略Vlog</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">Vlog</span>
+                        <span class="video-tag">7天</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="vlog">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1couple-ski">
+                    <div class="video-placeholder">💑</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>情侣滑雪之旅</h3>
+                    <p class="video-desc">和另一半的日本滑雪初体验，新手也能玩得开心</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">情侣</span>
+                        <span class="video-tag">新手</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="vlog">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1tohoku-winter">
+                    <div class="video-placeholder">🗾</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>日本东北冬季环游</h3>
+                    <p class="video-desc">仙台-青森-秋田，东北三县冬日自由行全记录</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">东北</span>
+                        <span class="video-tag">自由行</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="vlog">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1jr-pass">
+                    <div class="video-placeholder">🎫</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>JR Pass东北版使用攻略</h3>
+                    <p class="video-desc">怎么买最划算？能坐哪些车？实战经验分享</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">交通</span>
+                        <span class="video-tag">JR Pass</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-category="vlog">
+                <div class="video-thumb" data-video="https://www.bilibili.com/video/BV1winter-pack">
+                    <div class="video-placeholder">🧳</div>
+                    <div class="video-play">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>冬季日本行李打包</h3>
+                    <p class="video-desc">去北海道/东北滑雪带什么？防寒装备清单</p>
+                    <div class="video-meta">
+                        <span class="video-source">B站</span>
+                        <span class="video-tag">行李</span>
+                        <span class="video-tag">装备</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- 搜索提示 -->
+        <section class="search-tips">
+            <h2>🔍 找更多视频</h2>
+            <p>在B站或YouTube搜索以下关键词：</p>
+            <div class="search-keywords">
+                <a href="https://search.bilibili.com/all?keyword=八甲田%20滑雪" target="_blank" class="keyword-chip">八甲田
+                    滑雪</a>
+                <a href="https://search.bilibili.com/all?keyword=青森%20粉雪" target="_blank" class="keyword-chip">青森 粉雪</a>
+                <a href="https://search.bilibili.com/all?keyword=Aomori%20Spring" target="_blank"
+                    class="keyword-chip">Aomori Spring</a>
+                <a href="https://search.bilibili.com/all?keyword=乳头温泉" target="_blank" class="keyword-chip">乳头温泉</a>
+                <a href="https://search.bilibili.com/all?keyword=弘前%20雪灯笼" target="_blank" class="keyword-chip">弘前
+                    雪灯笼</a>
+                <a href="https://search.bilibili.com/all?keyword=仙台%20牛舌" target="_blank" class="keyword-chip">仙台 牛舌</a>
+            </div>
+        </section>
     </main>
 
     <nav class="bottom-nav">
         <a href="/">首页</a>
+        <a href="/pages/culture.html">风土</a>
         <a href="/pages/ski.html">雪场</a>
-        <a href="/pages/food.html">吃什么</a>
         <a href="/pages/ai.html">🤖臭臭</a>
     </nav>
 
@@ -189,7 +541,7 @@
             });
         });
 
-        // Video click - open YouTube search
+        // Video click - open link
         document.querySelectorAll('.video-thumb').forEach(thumb => {
             thumb.addEventListener('click', () => {
                 window.open(thumb.dataset.video, '_blank');

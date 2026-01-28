@@ -1,0 +1,406 @@
+/* ===========================
+   Culture Page Styles
+   =========================== */
+
+/* Culture Section */
+.culture-section {
+    margin-bottom: var(--space-xl);
+}
+
+/* Intro Stats */
+.culture-intro {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.culture-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.culture-stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.culture-desc {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+/* Location Cards */
+.location-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.location-card {
+    display: flex;
+    gap: var(--space-md);
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-fast);
+}
+
+.location-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .location-card {
+        background: #1A1A1A;
+    }
+}
+
+.location-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.location-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.location-jp {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.location-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+/* Experience Cards */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.experience-card {
+    display: flex;
+    gap: var(--space-md);
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .experience-card {
+        background: #1A1A1A;
+    }
+}
+
+.experience-emoji {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.experience-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+}
+
+.experience-content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.exp-tag {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+}
+
+.exp-tag.highlight {
+    background: var(--color-accent);
+    color: white;
+}
+
+/* Food Culture */
+.food-culture {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.food-highlight {
+    display: flex;
+    gap: var(--space-md);
+    background: linear-gradient(135deg, #FEF2F2 0%, #FECACA 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+@media (prefers-color-scheme: dark) {
+    .food-highlight {
+        background: linear-gradient(135deg, #451A1A 0%, #7F1D1D 100%);
+    }
+}
+
+.food-highlight-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.food-highlight-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+}
+
+.food-highlight-content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+@media (max-width: 400px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.food-item {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .food-item {
+        background: #1A1A1A;
+    }
+}
+
+.food-emoji {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.food-item h4 {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-xs);
+}
+
+.food-item p {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* Festival Cards */
+.festival-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.festival-card {
+    display: flex;
+    gap: var(--space-md);
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-fast);
+}
+
+.festival-card.current {
+    border: 2px solid var(--color-accent);
+    position: relative;
+}
+
+.festival-card.current::after {
+    content: '正好赶上！';
+    position: absolute;
+    top: -10px;
+    right: var(--space-md);
+    background: var(--color-accent);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+@media (prefers-color-scheme: dark) {
+    .festival-card {
+        background: #1A1A1A;
+    }
+}
+
+.festival-season {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.festival-season.summer {
+    background: linear-gradient(135deg, #FED7AA 0%, #FB923C 100%);
+    color: #9A3412;
+}
+
+.festival-season.winter {
+    background: linear-gradient(135deg, #BFDBFE 0%, #3B82F6 100%);
+    color: white;
+}
+
+.festival-season.spring {
+    background: linear-gradient(135deg, #FBCFE8 0%, #EC4899 100%);
+    color: white;
+}
+
+.festival-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.festival-jp {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.festival-date {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    margin: var(--space-xs) 0;
+}
+
+.festival-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+/* Tips Grid */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+@media (max-width: 400px) {
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tip-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .tip-card {
+        background: #1A1A1A;
+    }
+}
+
+.tip-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.tip-card h4 {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    margin-bottom: var(--space-xs);
+}
+
+.tip-card p {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* Trivia List */
+.trivia-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.trivia-item {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    padding: var(--space-md);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+    border-radius: var(--radius-md);
+}
+
+.trivia-num {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+.trivia-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+.trivia-item strong {
+    color: var(--color-text);
+}
